@@ -241,8 +241,24 @@ Text for this section.
 \section*{Content}
 Text and results for this section, as per the individual journal's instructions for authors. %\cite{koon,oreg,khar,zvai,xjon,schn,pond,smith,marg,hunn,advi,koha,mouse}
 
-\section*{Introduction}
-Introduction text
+\section*{Background}
+Incessant influx of new data on chemical entities and their properties steadily increases our capabilities for information retrieval in biomedical domain.
+However, ever-growing rates at which new information is being produced make it infeasible for any specialist to analyze manually even if confined within a specific subject.
+On the other hand the prevalent formats for such publication (paper, theses or a patent) is not structured in a way that is suitable for automatic processing\cite{eltyeb}.
+Various databases containing diverse chemical information, such as PubChem\cite{pubchem}, ChemSpider\cite{chemspider}, CAS Registry\cite{cas}, etc., partially address this problem by accumulating information from different sources and storing it in an organized, easy-to-process manner. 
+But the maintenance and curation of this kind of databases still requires substantial manual labour from the experts in the field.
+Moreover, a standardized entry to a database usually omits many of the nuances transmitted by a natural languge.
+For this reason, in recent years special interest  is given to the instruments for automatic information extraction from text\cite{swain}.
+
+Named entities recognition (NER) is an essential step in the process of extracting chemical information from text.
+The problem of NER is not uniqeue to chemical entities, but there are several features characteristic to the given subject.
+A lack of universal naming convention, the existance of multiple synonyms for a single entity (e.g. EXAMPLE), high sensitivity to spelling errors and a hard-to-parse syntax with multiple whitespaces, punctuation marks and numbers inside single entity name are some of the most obviouse examples\cite{brech,hat}.
+Significance of text mining and information extraction in biomedical domain is outlined by such initiatives as BioCreative challenge\cite{hirsch} and chemical named entities recognition (CNER) in particular by CHEMDNER task\cite{chemtask}.
+
+Historically, first approaches used for CNER were dictionary-based and rule-based. Dictionary-based algorithms rely on string matching to a domain-specific collection of terms. 
+They are highly dependent on the quality of this term collection, which can get outdated in time and hence requires constant expansion and curation\cite{hettne,reb}. 
+Rule-based algorithms make use of manually created and updated rules based on morphological and contextual information. 
+These rules allow users to describe potentially endless set of names if they follow  an orderly convention such as IUPAC, but do not port as well on trivial names and like dictionaries require maintenance by the experts\cite{budi}.
 
 
 
@@ -250,45 +266,6 @@ Introduction text
 
 
 
-\section*{Section title}
-Text for this section \ldots
-\subsection*{Sub-heading for section}
-Text for this sub-heading \ldots
-\subsubsection*{Sub-sub heading for section}
-Text for this sub-sub-heading \ldots
-\paragraph*{Sub-sub-sub heading for section}
-Text for this sub-sub-sub-heading \ldots
-In this section we examine the growth rate of the mean of $Z_0$, $Z_1$ and $Z_2$. In
-addition, we examine a common modeling assumption and note the
-importance of considering the tails of the extinction time $T_x$ in
-studies of escape dynamics.
-We will first consider the expected resistant population at $vT_x$ for
-some $v>0$, (and temporarily assume $\alpha=0$)
-%
-\[
- E \bigl[Z_1(vT_x) \bigr]= E
-\biggl[\mu T_x\int_0^{v\wedge
-1}Z_0(uT_x)
-\exp \bigl(\lambda_1T_x(v-u) \bigr)\,du \biggr].
-\]
-%
-If we assume that sensitive cells follow a deterministic decay
-$Z_0(t)=xe^{\lambda_0 t}$ and approximate their extinction time as
-$T_x\approx-\frac{1}{\lambda_0}\log x$, then we can heuristically
-estimate the expected value as
-%
-\begin{eqnarray}\label{eqexpmuts}
-E\bigl[Z_1(vT_x)\bigr] &=& \frac{\mu}{r}\log x
-\int_0^{v\wedge1}x^{1-u}x^{({\lambda_1}/{r})(v-u)}\,du
-\nonumber\\
-&=& \frac{\mu}{r}x^{1-{\lambda_1}/{\lambda_0}v}\log x\int_0^{v\wedge
-1}x^{-u(1+{\lambda_1}/{r})}\,du
-\nonumber\\
-&=& \frac{\mu}{\lambda_1-\lambda_0}x^{1+{\lambda_1}/{r}v} \biggl(1-\exp \biggl[-(v\wedge1) \biggl(1+
-\frac{\lambda_1}{r}\biggr)\log x \biggr] \biggr).
-\end{eqnarray}
-%
-Thus we observe that this expected value is finite for all $v>0$ (also see \cite{koon,khar,zvai,xjon,marg}).
 %\nocite{oreg,schn,pond,smith,marg,hunn,advi,koha,mouse}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
